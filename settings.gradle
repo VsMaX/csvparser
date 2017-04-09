@@ -1,0 +1,4 @@
+rootProject.name = 'csvparser'
+
+include 'parser'
+include 'webapi'
