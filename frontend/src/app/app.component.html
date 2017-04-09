@@ -1,0 +1,18 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+
+      <a class="navbar-brand" href="#">Upload file</a>
+    </div>
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!-- Standard button -->
+      <input type="file" ng2FileSelect [uploader]="uploader" />
+      <button type="button" class="btn btn-default" (click)="onFileUpload()">Upload</button>
+    </div>
+  </div>
+</div>
