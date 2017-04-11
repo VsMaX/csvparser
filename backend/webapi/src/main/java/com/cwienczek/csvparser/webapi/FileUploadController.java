@@ -21,6 +21,7 @@ public class FileUploadController {
         return "Hello World!";
     }
 
+    @CrossOrigin
     @RequestMapping(value="/upload", method= RequestMethod.POST)
     public com.cwienczek.csvparser.webapi.FileUploadResponse handleFileUpload(
             @RequestParam("file") MultipartFile file, @RequestParam String fileName) {
