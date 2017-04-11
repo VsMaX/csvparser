@@ -15,7 +15,7 @@ export class AppComponent {
 
 	constructor() {
 		this.options = new NgUploaderOptions({
-			url: 'http://api.ngx-uploader.com/upload',
+			url: URL,
 			filterExtensions: true,
 			allowedExtensions: ['csv'],
 			maxSize: 2097152,
@@ -34,5 +34,7 @@ export class AppComponent {
 	public handleUpload() {
 		this.inputUploadEvents.emit('startUpload');
 	}
+
+	public 
 
 }
