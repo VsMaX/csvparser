@@ -30,6 +30,8 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.boot:spring-boot-starter-security')
     compile('org.springframework.boot:spring-boot-starter-web')
+    // https://mvnrepository.com/artifact/com.github.akarnokd/rxjava2-extensions
+    compile group: 'com.github.akarnokd', name: 'rxjava2-extensions', version: '0.16.4'
     // https://mvnrepository.com/artifact/io.reactivex.rxjava2/rxjava
     compile group: 'io.reactivex.rxjava2', name: 'rxjava', version: '2.0.8'
 

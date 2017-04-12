@@ -1,27 +1,31 @@
-package com.cwienczek.csvparser.parser;
+package com.cwienczek.csvparser.webapi;
 
 /**
- * Created by Michal Cwienczek on 09/04/2017.
+ * Created by Michal Cwienczek on 11/04/2017.
  */
-public class CsvPropertyObject {
-    private double att1;
+public class AnalysisResult {
+    /*
+    Median of att1
+     */
+    private double att1; //names could be better...
+    /*
+    Median of att2
+     */
     private double att2;
+    /*
+    Median of att3
+     */
     private double att3;
     private double att4;
     private double att5;
-    private String att6;
-    private String att7;
-    private String label;
+    private double att6;
 
-    public CsvPropertyObject(double att1, double att2, double att3, double att4, double att5, String att6, String att7, String label) {
+    AnalysisResult(double att1, double att2, double att3, double att4, double att5) {
         this.att1 = att1;
         this.att2 = att2;
         this.att3 = att3;
         this.att4 = att4;
         this.att5 = att5;
-        this.att6 = att6;
-        this.att7 = att7;
-        this.label = label;
     }
 
     public double getAtt1() {
@@ -62,29 +66,5 @@ public class CsvPropertyObject {
 
     public void setAtt5(double att5) {
         this.att5 = att5;
-    }
-
-    public String getAtt6() {
-        return att6;
-    }
-
-    public void setAtt6(String att6) {
-        this.att6 = att6;
-    }
-
-    public String getAtt7() {
-        return att7;
-    }
-
-    public void setAtt7(String att7) {
-        this.att7 = att7;
-    }
-
-    public String getLabel() {
-        return label;
-    }
-
-    public void setLabel(String label) {
-        this.label = label;
     }
 }
