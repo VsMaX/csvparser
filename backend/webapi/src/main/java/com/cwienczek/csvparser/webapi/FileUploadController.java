@@ -80,7 +80,13 @@ public class FileUploadController {
     public double getMedianForList(Map.Entry<String, List<CsvPropertyObject>> propertyObjectList, Function<CsvPropertyObject, Double> medianPredicate){
         List<Double> sorted = propertyObjectList.getValue().stream().map(medianPredicate).sorted().collect(Collectors.toList());
         int count = sorted.size();
-        double median = sorted.get(count/2);
+        double median = 0;
+        if(count % 2 == 0){ //for even number of elements we need to get average of the middle two
+            median = (sorted.get(count/2 - 1) + sorted.get(count/2)) / 2;
+        } else { //else we just take the median element
+            median = sorted.get(count/2);
+        }
+
         return median;
     }
 
