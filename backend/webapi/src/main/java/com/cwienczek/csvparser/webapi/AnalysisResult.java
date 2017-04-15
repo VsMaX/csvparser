@@ -1,13 +1,18 @@
 package com.cwienczek.csvparser.webapi;
 
+import java.util.Date;
+
 /**
  * Created by Michal Cwienczek on 11/04/2017.
  */
 public class AnalysisResult {
+    private Date timestamp;
+    private String label;
     /*
-    Median of att1
-     */
-    private double att1; //names could be better...
+        Median of att1
+        I know, naming could be better...
+         */
+    private double att1;
     /*
     Median of att2
      */
@@ -20,7 +25,9 @@ public class AnalysisResult {
     private double att5;
     private double att6;
 
-    AnalysisResult(double att1, double att2, double att3, double att4, double att5) {
+    AnalysisResult(Date timestamp, String label, double att1, double att2, double att3, double att4, double att5) {
+        this.timestamp = timestamp;
+        this.label = label;
         this.att1 = att1;
         this.att2 = att2;
         this.att3 = att3;
@@ -66,5 +73,21 @@ public class AnalysisResult {
 
     public void setAtt5(double att5) {
         this.att5 = att5;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    public Date getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Date timestamp) {
+        this.timestamp = timestamp;
     }
 }

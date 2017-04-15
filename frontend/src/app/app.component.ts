@@ -35,6 +35,6 @@ export class AppComponent {
 		this.inputUploadEvents.emit('startUpload');
 	}
 
-	public 
+	
 
 }
